@@ -1,0 +1,20 @@
+To fix the issue, ensure that the selector accurately targets the element you want to apply the pseudo-element to. Use the appropriate level of specificity in the selector to avoid affecting unintended elements.   If necessary, restructure your HTML and consider using actual elements rather than pseudo-elements if the selector becomes too complex.
+
+For example, instead of:
+
+```css
+.container::before {
+  content: "Some text";
+}
+```
+
+if only a specific child element needs the pseudo-element, target that child:
+
+```css
+.container > .child::before {
+  content: "Some text";
+}
+```
+Or use a more precise selector based on the container's properties.
+
+If the complexity is excessive, consider using a different technique for adding the text, for instance an actual element like a `<span>` within the `.container`.
