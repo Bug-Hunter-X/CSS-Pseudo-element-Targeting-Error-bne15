@@ -1,0 +1,8 @@
+The following CSS code uses a pseudo-element that is not properly targeted, causing unexpected styling or no styling at all.  The issue is that the selector is too broad or too specific, and therefore doesn't match the intended element.
+
+```css
+.container::before {
+  content: "Some text";
+}
+```
+This might not work as expected if the `.container` has a more specific child or if the `::before` pseudo-element needs a more precise parent selector.
